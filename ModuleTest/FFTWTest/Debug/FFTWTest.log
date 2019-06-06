@@ -1,0 +1,4 @@
+﻿  Main.c
+e:\xt18\7.geophysic\demo1\test2\moduletest\fftwtest\main.c(22): warning C4013: “_imp_fftw_malloc”未定义；假设外部返回 int
+e:\xt18\7.geophysic\demo1\test2\moduletest\fftwtest\main.c(42): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+libfftw3-3.lib(libfftw3-3.dll) : fatal error LNK1112: 模块计算机类型“x64”与目标计算机类型“x86”冲突
