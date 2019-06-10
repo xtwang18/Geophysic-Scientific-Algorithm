@@ -6,7 +6,7 @@
 #include "fftw3.h"
 
 #pragma comment(lib, "libfftw3-3.lib") // double版本
-// #pragma comment(lib, "libfftw3f-3.lib")// float版本
+ //#pragma comment(lib, "libfftw3f-3.lib")// float版本
 // #pragma comment(lib, "libfftw3l-3.lib")// long double版本
 
 #define PI 3.1415926
@@ -14,26 +14,36 @@
 
 int main()
 {
-	int len = 8;
-	double *in = NULL;
+	int len = 4;
+	fftw_complex  *in = NULL;
 	// 如果要使用float版本,需先引用float版本的lib库,然后在fftw后面加上f后缀即可.
 	fftw_complex *out = NULL;// fftwf_complex --> 即为float版本
 	fftw_plan p;
-	in = (double *)fftw_malloc(sizeof(double) * len);
+	in = (fftw_complex *)fftw_malloc(sizeof(fftw_complex) * len);
 	out = (fftw_complex *)fftw_malloc(sizeof(fftw_complex) * len);
 	double dx = 1.0 / len;
 	//printf("size of fftw_complex:%d,%d\n",sizeof(fftw_complex),sizeof(double));
 	// 输入纯实数
+	in[0][0] = 1;
+	in[0][1] = 0;
+	in[1][0] = 2;
+	in[1][1] = 0;
+	in[2][0] = -1;
+	in[2][1] = 0;
+	in[3][0] = 3;
+	in[3][1] = 0;
+ 
 	for (int i = 0; i < len; i++)
 	{
-		in[i] = sin(2 * PI * dx*i) + sin(4 * PI * dx*i);
+		//in[i] = i + 1;//sin(2 * PI * dx*i) + sin(4 * PI * dx*i);
 
-		printf("%.2f ", in[i]);
+		printf("%d: %.2f + %.2fi\n ", i, in[i][0], in[i][1]);
 	}
+
 	printf("\n\n");
 
 	// 傅里叶变换
-	p = fftw_plan_dft_1d(len, in, out,-1, FFTW_ESTIMATE);
+	p = fftw_plan_dft_1d(len, in, out, FFTW_FORWARD, FFTW_ESTIMATE);
 	fftw_execute(p);
 	
 	// 输出幅度谱

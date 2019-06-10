@@ -1,4 +1,2 @@
 ﻿  Main.c
-e:\xt18\7.geophysic\demo1\test2\moduletest\fftwtest\main.c(36): warning C4047: “函数”:“fftw_complex (*)”与“double *”的间接级别不同
-e:\xt18\7.geophysic\demo1\test2\moduletest\fftwtest\main.c(36): warning C4024: “fftw_plan_dft_1d”: 形参和实参 2 的类型不同
   FFTWTest.vcxproj -> E:\xt18\7.Geophysic\Demo1\Test2\ModuleTest\x64\Debug\FFTWTest.exe
