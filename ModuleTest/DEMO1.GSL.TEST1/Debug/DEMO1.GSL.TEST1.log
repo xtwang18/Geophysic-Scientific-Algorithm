@@ -1,0 +1,7 @@
+﻿  main.c
+e:\xt18\7.geophysic\geophysic-scientific-algorithm\moduletest\demo1.gsl.test1\main.c(20): warning C4133: “函数”: 从“gsl_matrix *”到“gsl_matrix_float *”的类型不兼容
+e:\xt18\7.geophysic\geophysic-scientific-algorithm\moduletest\demo1.gsl.test1\main.c(23): warning C4018: “>”: 有符号/无符号不匹配
+e:\xt18\7.geophysic\geophysic-scientific-algorithm\moduletest\demo1.gsl.test1\main.c(25): warning C4133: “函数”: 从“gsl_matrix *”到“const gsl_matrix_float *”的类型不兼容
+e:\xt18\7.geophysic\geophysic-scientific-algorithm\moduletest\demo1.gsl.test1\main.c(30): warning C4133: “函数”: 从“gsl_matrix *”到“gsl_matrix_float *”的类型不兼容
+e:\xt18\7.geophysic\geophysic-scientific-algorithm\moduletest\demo1.gsl.test1\main.c(10): warning C4133: “初始化”: 从“gsl_matrix_float *”到“gsl_matrix *”的类型不兼容
+  DEMO1.GSL.TEST1.vcxproj -> E:\xt18\7.Geophysic\Geophysic-Scientific-Algorithm\ModuleTest\Debug\DEMO1.GSL.TEST1.exe

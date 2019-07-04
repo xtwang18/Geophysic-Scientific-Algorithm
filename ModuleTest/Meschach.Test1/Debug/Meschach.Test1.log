@@ -1,0 +1,14 @@
+﻿memory.obj : error LNK2019: 无法解析的外部符号 _ev_err，该符号在函数 _m_get 中被引用
+zmemory.obj : error LNK2001: 无法解析的外部符号 _ev_err
+memory.obj : error LNK2019: 无法解析的外部符号 _mem_info_is_on，该符号在函数 _m_free 中被引用
+zmemory.obj : error LNK2001: 无法解析的外部符号 _mem_info_is_on
+memory.obj : error LNK2019: 无法解析的外部符号 _mem_bytes_list，该符号在函数 _m_free 中被引用
+zmemory.obj : error LNK2001: 无法解析的外部符号 _mem_bytes_list
+memory.obj : error LNK2019: 无法解析的外部符号 _mem_numvar_list，该符号在函数 _m_free 中被引用
+zmemory.obj : error LNK2001: 无法解析的外部符号 _mem_numvar_list
+memory.obj : error LNK2019: 无法解析的外部符号 _iv_get，该符号在函数 _iv_get_vars 中被引用
+memory.obj : error LNK2019: 无法解析的外部符号 _iv_resize，该符号在函数 _iv_resize_vars 中被引用
+memory.obj : error LNK2019: 无法解析的外部符号 _iv_free，该符号在函数 _iv_free_vars 中被引用
+memory.obj : error LNK2019: 无法解析的外部符号 ___zero__，该符号在函数 _m_resize 中被引用
+zmemory.obj : error LNK2019: 无法解析的外部符号 ___zzero__，该符号在函数 _zm_resize 中被引用
+E:\xt18\7.Geophysic\Geophysic-Scientific-Algorithm\ModuleTest\Debug\Meschach.Test1.exe : fatal error LNK1120: 9 个无法解析的外部命令

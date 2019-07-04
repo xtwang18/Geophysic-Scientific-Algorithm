@@ -24,19 +24,21 @@ int main() {
 			seisiy[i][j] = 0.;
 		}
 	}
-	// printf("seisiy 占用空间 = %d \n", sizeof(float));//检查内存分配大小
+
+	
 	//读取二进制文件，将数据存放到数组中
 	ReadBinFile(seisiy);
+
+
 	//CreateBinFile(seisiy);
 
-	//释放空间
-#pragma region MyRegion
+	 
+#pragma region 释放空间for
 	for (size_t i = 0; i < ns; i++)
 	{
 		free(seisiy[i]);
 		seisiy[i] = NULL;
 	}
-	free(seisiy);
 	seisiy = NULL;
 	getchar();
 	return 0;
@@ -54,14 +56,19 @@ void  ReadBinFile(float **seis) {
 	}
 	else
 	{
-		for (size_t i = 0; i < ns; i++)
-		{			 
-				fread(&seis[i],sizeof(float),ntr,fp);			 		
+		for (size_t j = 0; j < ntr; j++)
+		{		
+			for (size_t i = 0; i < ns; i++)
+			{
+				fread(&seis[i][j],sizeof(float),1,fp);	
+			}					 		
 		}
 		fclose(fp);
 	}
-	
-	printf("[486][3]:%lf\n", seis[485][2]);
+	for (size_t i = 1845; i > 1832; i--)
+	{
+		printf("%e\n",seis[i][499]);
+	}
 }
 
 void CreateBinFile(float **seisiy)
